@@ -1,0 +1,5 @@
+CALLER 9979ef45 bidder bid
+CALLVALUE 9979ef45 newbid bid
+CALLER 96b5a755 owner cancel
+CALLER b9a2de3a finalizer finalize
+BLOCKNUMBER b9a2de3a currenttime finalize

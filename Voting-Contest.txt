@@ -1,0 +1,2 @@
+CALLER 6dd7d8ea voter vote
+PARAM 6dd7d8ea candidate vote

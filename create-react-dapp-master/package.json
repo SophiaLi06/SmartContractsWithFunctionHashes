@@ -1,0 +1,37 @@
+{
+  "name": "create-react-dapp",
+  "version": "0.3.10",
+  "description": "An Ethereum template layered upon create-react-app",
+  "keywords": [
+    "ethereum",
+    "web3",
+    "truffle",
+    "trufflesuite",
+    "truffleframework",
+    "react",
+    "ganache",
+    "rinkeby"
+  ],
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5.2"
+  },
+  "homepage": "https://github.com/mjhm/create-react-dapp",
+  "bugs": "https://github.com/mjhm/create-react-dapp/issues",
+  "license": "MIT",
+  "author": {
+    "name": "John McLaughlin"
+  },
+  "bin": "scripts/create-react-dapp",
+  "repository": "github:mjhm/create-react-dapp",
+  "files": [
+    "scripts",
+    "template"
+  ],
+  "scripts": {
+    "toc": "markdown-toc -i ./README.md"
+  },
+  "devDependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}

@@ -1,0 +1,5 @@
+CALLER 26b7aeea bidder bid
+CALLVALUE 26b7aeea newbid bid
+TIMESTAMP 26b7aeea currenttime bid
+CALLER 96b5a755 owner cancel
+TIMESTAMP e8083863 currenttime finalize

@@ -1,0 +1,3 @@
+CALLER d5f4f0b3 buyer buy
+CALLVALUE d5f4f0b3 value buy
+CALLER 98d5fdca owner draw

@@ -1,0 +1,4 @@
+'React,', 'meet', 'Ethereum', 'Vote', 'For:', 'Votes', 'Votes', 'Recorded', 'Rama', '2', 'Nick', '1', 'Jose', '0']]
+
+the buttons are Rama, Nick and Jose
+PS: user can click the three buttons to vote for a certain person.

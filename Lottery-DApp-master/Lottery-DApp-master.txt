@@ -1,0 +1,2 @@
+[['Lottery', 'User', 'User', 'Account:', 'Your', 'Balance:', 'Total', 'Tokens:', 'Guesses:', 'Buy', 'Tokens', 'Buy', 'Make', 'Guess', 'Guess', 'Contract', 'Contract', 'Owner:', 'Contract', 'Balance:', 'Close', 'Game']]
+the button is Buy, Guess

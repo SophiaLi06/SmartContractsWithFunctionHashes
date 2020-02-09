@@ -1,0 +1,70 @@
+#!/bin/bash
+
+set -e
+
+TEMPLATE_DIR=${0%/*/*}/lib/node_modules/${0##*/}/template
+
+if [ -z "$1" ]; then
+  npx create-react-app --help | sed 's/create-react-app/create-react-dapp/'
+  exit 1
+fi
+
+APP_NAME=$1
+
+echo '**********    CREATE REACT DAPP    **********'
+echo '********** 1. CREATE REACT APP ' $@ ' ***'
+echo
+npx create-react-app $@
+echo '********** DONE CREATING REACT APP ***********'
+echo '**********************************************'
+echo
+echo '********** 2. CREATING DAPP LAYER ************'
+echo
+
+## Files from /
+mv $TEMPLATE_DIR/.flowconfig  $APP_NAME/
+mv $TEMPLATE_DIR/.npmignore  $APP_NAME/.gitignore
+
+node $TEMPLATE_DIR/../scripts/merge_package.js $TEMPLATE_DIR/ `pwd`/$APP_NAME/
+mv $APP_NAME/README.md $APP_NAME/REACT.md
+mv $TEMPLATE_DIR/TEMPLATE.md  $APP_NAME/README.md
+
+## Files from /dapp
+mv $TEMPLATE_DIR/dapp $APP_NAME
+
+## Files from /public
+mv $TEMPLATE_DIR/public/favicon.ico $APP_NAME/public
+mv $TEMPLATE_DIR/public/index.html $APP_NAME/public/index.html
+sed 's/App/dApp/g' $APP_NAME/public/manifest.json > $APP_NAME/public/_manifest.json
+mv $APP_NAME/public/_manifest.json $APP_NAME/public/manifest.json
+
+## Files from /src
+rm -rf $APP_NAME/src
+mv $TEMPLATE_DIR/src  $APP_NAME/src/
+
+
+echo '********** DONE CREATING DAPP LAYER **********'
+echo '**********************************************'
+echo
+echo '********** 3. INSTALLING DEPENDENCIES ********'
+
+if hash yarn 2>/dev/null; then
+  (cd $APP_NAME && yarn)
+else
+  (cd $APP_NAME && npm install)
+fi
+
+echo '********** DONE INSTALLING DEPENDENCIES ******'
+echo '**********************************************'
+echo
+echo '********** QUICK START NEXT STEPS ************'
+echo
+echo 'cd ' $APP_NAME
+echo 'npm run ganache'
+echo
+echo '*** (IN A SEPARATE SHELL RUN) ***'
+echo
+echo 'npm run migrate'
+echo 'npm start'
+echo
+echo '********** Happy Dapping! ********************'

@@ -1,0 +1,4 @@
+CALLER ecfc7ecc bidder bid
+CALLVALUE ecfc7ecc newbid bid
+CALLER 8fa8b790 owner cancel
+CALLER 3ccfd60b finalizer finalize

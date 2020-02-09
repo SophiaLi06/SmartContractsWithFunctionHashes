@@ -1,0 +1,2 @@
+[['Simple', 'Voting', 'DApp', 'Network:', 'Candidate', 'Contract', 'address:', 'Load', 'Count:', 'Wallet', 'Vote', 'account:', 'ether:', 'Your', 'pending', 'transaction:', '-', 'Status:', '-', 'This', 'project', 'is', 'sponsored', 'by', 'KULAP.io', '|', 'Open', 'source', 'on', 'Github']]
+The button is Vote

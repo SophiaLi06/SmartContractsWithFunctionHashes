@@ -1,0 +1,3 @@
+CALLER ecfc7ecc bidder bid
+CALLVALUE ecfc7ecc newbid bid
+CALLER f77282ab finalizer finalize

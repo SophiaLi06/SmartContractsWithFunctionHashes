@@ -1,0 +1,2 @@
+CALLER 598647f8 bidder bid
+PARAM 598647f8 newbid bid
